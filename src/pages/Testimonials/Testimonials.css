@@ -1,0 +1,18 @@
+.wave-animation {
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+    animation: wave 8s infinite linear;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }

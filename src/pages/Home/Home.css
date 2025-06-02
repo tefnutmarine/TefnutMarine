@@ -1,0 +1,251 @@
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire width */
+  height: 100%; /* Cover the entire height */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient from black to transparent */
+  z-index:11; /* Place it behind the slides */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  pointer-events: none; /* Add this line */
+  z-index: 1
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1; /* Ensure active slide is above the overlay */
+  pointer-events: auto; /* Add this line */
+  z-index: 2
+}
+
+.slide-content {
+  max-width: 800px;
+  padding: 0 60px; /* Increased padding slightly */
+  margin-left: 60px; /* Added margin to shift content away from left arrow */
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 2; /* Ensure content stays above arrows and overlay */
+  position: relative; /* Ensure content is positioned relative to the hero section */
+}
+
+.title {
+  font-size: 4rem; /* Increased for better look */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  z-index:9999;
+}
+
+.subtitle {
+  display: block;
+  font-size: 3.2rem; /* Slightly larger */
+  color: #a3d5e9;
+  margin-top: 0.5rem;
+}
+
+.description {
+  font-size: 1.4rem; /* Increased for readability */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem; /* Slightly larger */
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #0288d1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0277bd;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px; /* Slightly reduced gap for a tighter look */
+  z-index: 2;
+}
+
+.dot {
+  width: 8px; /* Slightly larger for better visibility */
+  height: 8px;
+  border-radius: 50%; /* Keep the circular shape for inactive dots */
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly more transparent for inactive dots */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.dot.active {
+  background-color: white;
+  width: 30px; /* More elongated for the active dot */
+  height: 8px; /* Match the height of inactive dots for consistency */
+  border-radius: 4px; /* Slightly rounded rectangle */
+}
+
+.arrow, .dots {
+  z-index: 20; /* Increased from 2 to ensure they stay on top */
+}
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .slide-content {
+      margin-left: 50px; /* Slightly less margin on medium screens */
+      padding: 0 40px;
+  }
+
+  .title {
+      font-size: 3.5rem;
+  }
+
+  .subtitle {
+      font-size: 2.8rem;
+  }
+
+  .description {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+      margin-left: 40px; /* Reduced for smaller screens */
+      padding: 0 30px;
+  }
+
+  .title {
+      font-size: 2.8rem;
+  }
+
+  .subtitle {
+      font-size: 2.2rem;
+  }
+
+  .description {
+      font-size: 1.1rem;
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  .btn {
+      width: 100%;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content {
+      margin-left: 30px; /* Further reduced for phone screens */
+      padding: 0 20px;
+  }
+
+  .title {
+      font-size: 2.2rem;
+  }
+
+  .subtitle {
+      font-size: 1.8rem;
+  }
+
+  .description {
+      font-size: 1rem;
+  }
+
+  .arrow {
+      width: 30px;
+      height: 30px;
+  }
+
+  .arrow-left {
+      left: 10px;
+  }
+
+  .arrow-right {
+      right: 10px;
+  }
+}
