@@ -97,12 +97,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <address className="not-italic space-y-2 text-blue-100">
-              <p>123 Harbor Drive</p>
-              <p>Marina Bay, CA 94123</p>
-              <p>United States</p>
+              <p> No. AGP-16-180, Nr Iqbal School,</p>
+              <p>Kolavayal PO ,</p>
+              <p>Kerala - India ,Pin-671531</p>
               <p className="pt-2">
                 <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  +1 (234) 567-890
+                 +91 8129096414 <br />
+              +91 6235656414
                 </a>
               </p>
               <p>
