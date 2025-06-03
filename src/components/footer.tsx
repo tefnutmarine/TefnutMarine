@@ -101,14 +101,21 @@ export default function Footer() {
               <p>Kolavayal PO ,</p>
               <p>Kerala - India ,Pin-671531</p>
               <p className="pt-2">
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
+                <a href="tel:+91 8129096414" className="hover:text-white transition-colors">
                  +91 8129096414 <br />
-              +91 6235656414
+              
+                </a>
+                <a href="tel:+91 6235656414 " className="hover:text-white transition-colors">
+                +91 6235656414 <br />
+              
                 </a>
               </p>
               <p>
-                <a href="mailto:info@marineservices.com" className="hover:text-white transition-colors">
-                  info@marineservices.com
+                <a href="mailto:Info@tefnutmarine.com " className="hover:text-white transition-colors">
+                  Info@tefnutmarine.com 
+                </a> <br />
+                 <a href="mailto:operations@tefnutmarine.com" className="hover:text-white transition-colors">
+                   operations@tefnutmarine.com
                 </a>
               </p>
             </address>
@@ -120,10 +127,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Marine Services. All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="/terms" className="text-blue-100 hover:text-white text-sm transition-colors">
+            <a href="/#" className="text-blue-100 hover:text-white text-sm transition-colors">
             Reliable, Precise, Innovative
             </a>
-            <a href="/privacy" className="text-blue-100 hover:text-white text-sm transition-colors">
+            <a href="/#" className="text-blue-100 hover:text-white text-sm transition-colors">
             Marine & Offshore Solutions.
             </a>
             

@@ -26,6 +26,7 @@ const Navbar = () => {
     }} className="h-24 sticky top-0 z-99 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         {/* Logo */}
+      <a href="/">
         <div className="mr-auto pl-0 ml-0 -z-50">
           <div className="flex items-center">
             <img src="images/tefnut_logo.png" alt="" className="w-26 h-25 object-contain" />
@@ -37,6 +38,7 @@ const Navbar = () => {
             />
           </div>
         </div>
+      </a>
 
         {/* Desktop navigation - Text color updated for dark background */}
         <div className="hidden md:flex items-center justify-center flex-1">

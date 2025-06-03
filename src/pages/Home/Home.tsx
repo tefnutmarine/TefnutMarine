@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import "./Home.css"
 import Navbar from "@/components/Navbar"
 import ServicesSection from "../ServicesPart/Services"
@@ -36,6 +37,7 @@ const slides = [
 ]
 
 const HeroSlider = () => {
+  const navigate = useNavigate()
   const [currentSlide, setCurrentSlide] = useState(0)
 
   // Auto-advance slides
@@ -82,8 +84,8 @@ const HeroSlider = () => {
             </h1>
             <p className="description">{slide.description}</p>
             <div className="buttons">
-              <button className="btn btn-primary" style={{background:'#04878f'}}>Our Services</button>
-              <button className="btn btn-outline backdrop-blur-md">Contact Us</button>
+              <button onClick={()=>navigate('/services')}  className="btn btn-primary" style={{background:'#04878f'}}>Our Services</button>
+              <button onClick={()=>navigate('/contact')} className="btn btn-outline backdrop-blur-md">Contact Us</button>
             </div>
           </div>
         </div>

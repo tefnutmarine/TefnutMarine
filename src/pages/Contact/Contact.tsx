@@ -56,9 +56,13 @@ export default function ContactPreview() {
             </div>
             <h3  style={{color:'#04878f'}} className="text-xl font-bold text-blue-900 mb-2">Call Us</h3>
             <p className="text-gray-600 mb-4">Available 24/7 for your needs</p>
-            <a href="tel:+1234567890"  style={{color:'#04878f'}} className="text-blue-600 font-medium hover:underline">
+            <a href="tel:+91 8129096414"  style={{color:'#04878f'}} className="text-blue-600 font-medium hover:underline">
               +91 8129096414 <br />
-              +91 6235656414
+              
+            </a>
+            <a href="tel:+91 6235656414"  style={{color:'#04878f'}} className="text-blue-600 font-medium hover:underline">
+              +91 6235656414 <br />
+              
             </a>
           </div>
 

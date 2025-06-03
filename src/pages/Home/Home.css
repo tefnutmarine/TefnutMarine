@@ -11,10 +11,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Cover the entire width */
-  height: 100%; /* Cover the entire height */
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient from black to transparent */
-  z-index:11; /* Place it behind the slides */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 11;
+  pointer-events: none; /* Add this line to allow clicks to pass through */
 }
 
 .slide {
@@ -28,8 +29,7 @@
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   display: flex;
-  align-items: center;
-  pointer-events: none; /* Add this line */
+  align-items: center; /* Add this line */
   z-index: 1
 }
 
@@ -42,12 +42,12 @@
 
 .slide-content {
   max-width: 800px;
-  padding: 0 60px; /* Increased padding slightly */
-  margin-left: 60px; /* Added margin to shift content away from left arrow */
+  padding: 0 60px;
+  margin-left: 60px;
   color: white;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  z-index: 2; /* Ensure content stays above arrows and overlay */
-  position: relative; /* Ensure content is positioned relative to the hero section */
+  z-index: 12; /* Changed from 2 to 12 to ensure it’s above the pseudo-element (z-index: 11) */
+  position: relative;
 }
 
 .title {

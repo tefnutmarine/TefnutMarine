@@ -187,10 +187,10 @@ useEffect(() => {
   const offices = [
     {
       name: "Details...",
-      address: "Kerela, Kohi, 94123",
-      phone: "+1 (234) 567-890",
-      email: "info@marineservices.com",
-      hours: "Monday - Friday: 8:00 AM - 6:00 PM",
+      address: "No. AGP-16-180,Kolavayal PO, Kerala - India ,Pin-671531",
+      phone: "+91 6235656414 , +91 8129096414",
+      email: "Info@tefnutmarine.com ,  operations@tefnutmarine.com",
+      hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
     },
    
   ]
@@ -243,8 +243,12 @@ useEffect(() => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-blue-100 mb-4">Available 24/7 for your needs</p>
-              <a href="tel:+1234567890" className="text-blue-200 font-medium hover:text-white transition-colors">
-                +1 (234) 567-890
+              <a href="tel:+91 6235656414" className="text-blue-200 font-medium hover:text-white transition-colors">
+                +91 6235656414 
+              </a>
+              <br />
+              <a href="tel:+91 8129096414" className="text-blue-200 font-medium hover:text-white transition-colors">
+                +91 8129096414
               </a>
             </div>
 
@@ -254,9 +258,13 @@ useEffect(() => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-blue-100 mb-4">Send us your inquiries anytime</p>
-              <a href="mailto:info@marineservices.com" className="text-blue-200 font-medium hover:text-white transition-colors">
-                info@marineservices.com
+              <a href="mailto:Info@tefnutmarine.com " className="text-blue-200 font-medium hover:text-white transition-colors">
+                Info@tefnutmarine.com 
               </a>
+              <br />
+              <a href="mailto:operations@tefnutmarine.com" className="text-blue-200 font-medium hover:text-white transition-colors">
+              operations@tefnutmarine.com             
+               </a>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center shadow-md hover:bg-white/15 transition-colors duration-300 transform hover:-translate-y-1">
@@ -266,9 +274,9 @@ useEffect(() => {
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-blue-100 mb-4">Our headquarters location</p>
               <address className="text-blue-200 font-medium not-italic">
-                123 Harbor Drive
-                <br />
-                Marina Bay, CA 94123
+                 No. AGP-16-180, Nr Iqbal School,
+                Kolavayal PO , <br /> Kerala - India ,Pin-671531
+                
               </address>
             </div>
           </div>
@@ -495,8 +503,8 @@ useEffect(() => {
                 </p>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 mr-2 text-blue-300" />
-                  <a href="tel:+18001234567" className="text-blue-200 hover:text-white transition-colors font-bold">
-                    +1 (800) 123-4567
+                  <a href="tel:+91 8129096414" className="text-blue-200 hover:text-white transition-colors font-bold">
+                    +91 8129096414
                   </a>
                 </div>
               </div>
